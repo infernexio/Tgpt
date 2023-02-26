@@ -18,4 +18,6 @@ response = openai.Completion.create(
 )
 
 message = response.choices[0].text
+if (message == ""):
+    message = "I'm sorry, I don't understand."
 print(message)
